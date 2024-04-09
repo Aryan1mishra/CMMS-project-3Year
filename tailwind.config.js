@@ -2,10 +2,17 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{
+        "bgImage":"url(./components/images/bg.png)",
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+]
 }
 
